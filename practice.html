@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice — PhysicsPrep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="practice">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-icon">⚛</span><span>PhysicsPrep</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><nav class="main-nav"><a href="index.html">Home</a><a class="active" href="practice.html">Practice</a><a href="mock.html">Mock Test</a><a href="pyq.html">PYQs</a></nav></div></header>
+<main class="page-main">
+<div class="container narrow">
+  <div class="page-heading"><span class="eyebrow">PRACTICE ENGINE</span><h1>Choose what you want to practice</h1><p>Filter a question set, then let PhysicsPrep build a fresh session.</p></div>
+  <section class="selector-card">
+    <div class="form-grid">
+      <label>Exam<select id="examSelect"><option value="">All Exams</option></select></label>
+      <label>Subject<select id="subjectSelect"><option value="">All Subjects</option></select></label>
+      <label>Topic<select id="topicSelect"><option value="">All Topics</option></select></label>
+      <label>Number of Questions<select id="countSelect"><option>5</option><option selected>10</option><option>20</option></select></label>
+      <label>Mode<select id="modeSelect"><option value="random">Random Practice</option><option value="pyq">PYQ Practice</option></select></label>
+    </div>
+    <div id="availability" class="availability"></div>
+    <button id="startPractice" class="btn btn-primary btn-large">Start Practice →</button>
+  </section>
+  <div class="tip-card"><span>💡</span><div><b>How it works</b><p>Choose an exam, subject or topic. If fewer questions are available than requested, PhysicsPrep automatically uses all matching questions.</p></div></div>
+</div>
+</main>
+<footer class="site-footer"><div class="container"><b>⚛ PhysicsPrep</b><span>Question engine powered by data, not page-by-page HTML.</span></div></footer>
+<script src="data/questions/quantum.js"></script><script src="js/question-engine.js"></script><script src="js/app.js"></script>
+</body></html>
