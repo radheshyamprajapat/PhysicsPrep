@@ -493,182 +493,302 @@
      MOCK TEST PAGE
   ========================================================= */
 
-  function initMock() {
+ function initMock() {
 
-    const grid =
-      document.querySelector("#mockGrid");
+  const grid = document.querySelector("#mockGrid");
 
-    if (!grid) {
-      return;
+  if (!grid) return;
+
+
+  const configs = [
+
+    {
+      id: "barc-full-01",
+
+      title: "BARC Physics — Full Length Mock 01",
+
+      desc:
+        "100 mixed Physics MCQs • 2 hours • Easy + Moderate",
+
+      count: 100,
+
+      duration: 120 * 60,
+
+      exam: "",
+
+      subject: "",
+
+      topic: "",
+
+      allowedTypes: ["PYQ"],
+
+      allowedDifficulty: ["Easy", "Moderate"],
+
+      icon: "⚛️",
+
+      featured: true
+    },
+
+
+    {
+      id: "quantum-mock",
+
+      title: "Quantum Mechanics",
+
+      desc:
+        "Random questions from Quantum Mechanics",
+
+      count: 10,
+
+      duration: 15 * 60,
+
+      exam: "",
+
+      subject: "Quantum Mechanics",
+
+      topic: "",
+
+      icon: "⚛️"
+    },
+
+
+    {
+      id: "mixed-mock",
+
+      title: "Mixed Physics",
+
+      desc:
+        "Questions from all available Physics topics",
+
+      count: 10,
+
+      duration: 15 * 60,
+
+      exam: "",
+
+      subject: "",
+
+      topic: "",
+
+      icon: "🌐"
     }
 
+  ];
 
-    const configs = [
 
-      {
-        title: "Quantum Mechanics",
+  grid.innerHTML = configs.map((c, i) => {
 
-        description:
-          "Random questions from Quantum Mechanics",
+    return `
 
-        count: 10,
+      <article class="mock-card ${c.featured ? "featured-mock" : ""}">
 
-        exam: "",
+        ${c.featured ? `
+          <div class="featured-badge">
+            FULL LENGTH
+          </div>
+        ` : ""}
 
-        subject: "Quantum Mechanics",
 
-        topic: ""
+        <div class="card-icon">
+          ${c.icon}
+        </div>
 
-      },
 
-      {
-        title: "Mixed Physics",
+        <h3>
+          ${escapeHTML(c.title)}
+        </h3>
 
-        description:
-          "Questions from all available topics",
 
-        count: 10,
+        <p>
+          ${escapeHTML(c.desc)}
+        </p>
 
-        exam: "",
 
-        subject: "",
+        <div class="meta">
 
-        topic: ""
+          <span class="pill">
+            ${c.count} Questions
+          </span>
+
+          <span class="pill">
+            ${c.duration / 60} Minutes
+          </span>
+
+          ${c.featured ? `
+            <span class="pill">
+              Mixed Physics
+            </span>
+          ` : `
+            <span class="pill">
+              Random
+            </span>
+          `}
+
+        </div>
+
+
+        <button
+          class="btn btn-primary"
+          data-mock="${i}">
+
+          Start Test →
+
+        </button>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+
+  /*
+   * START MOCK
+   */
+
+  grid.querySelectorAll("[data-mock]").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      const config =
+        configs[Number(btn.dataset.mock)];
+
+
+      /*
+       * Start with all available questions
+       */
+
+      let questions =
+        QuestionEngine.filter({
+
+          exam: config.exam,
+
+          subject: config.subject,
+
+          topic: config.topic
+
+        });
+
+
+      /*
+       * Filter question type
+       *
+       * BARC mock currently uses PYQs
+       */
+
+      if (
+        config.allowedTypes &&
+        config.allowedTypes.length
+      ) {
+
+        questions =
+          questions.filter(q =>
+            config.allowedTypes.includes(q.type)
+          );
 
       }
 
-    ];
+
+      /*
+       * Filter difficulty
+       *
+       * Only if difficulty exists
+       * in the question data.
+       */
+
+      if (
+        config.allowedDifficulty &&
+        config.allowedDifficulty.length
+      ) {
+
+        const questionsWithDifficulty =
+          questions.filter(q =>
+            q.difficulty
+          );
 
 
-    grid.innerHTML =
-      configs
-        .map((config, index) => {
+        /*
+         * If difficulty information exists,
+         * apply the filter.
+         *
+         * If old questions don't have difficulty,
+         * don't accidentally remove everything.
+         */
 
-          return `
-            <article class="mock-card">
+        if (questionsWithDifficulty.length > 0) {
 
-              <div class="card-icon">
-                ${index === 0 ? "⚛️" : "🌐"}
-              </div>
-
-              <h3>
-                ${escapeHTML(config.title)}
-              </h3>
-
-              <p>
-                ${escapeHTML(config.description)}
-              </p>
-
-              <div class="meta">
-
-                <span class="pill">
-                  ${config.count} questions
-                </span>
-
-                <span class="pill">
-                  Random
-                </span>
-
-                <span class="pill">
-                  15 min
-                </span>
-
-              </div>
-
-              <button
-                class="btn btn-primary"
-                data-mock="${index}"
-              >
-                Start Test →
-              </button>
-
-            </article>
-          `;
-
-        })
-        .join("");
-
-
-    /* ---------------------------------------------------------
-       MOCK BUTTONS
-    --------------------------------------------------------- */
-
-    grid
-      .querySelectorAll("[data-mock]")
-      .forEach(button => {
-
-        button.addEventListener(
-          "click",
-          () => {
-
-            const config =
-              configs[
-                Number(button.dataset.mock)
-              ];
-
-
-            const matchingQuestions =
-              QuestionEngine.filter({
-
-                exam: config.exam,
-
-                subject: config.subject,
-
-                topic: config.topic
-
-              });
-
-
-            const questions =
-              QuestionEngine.sample(
-                matchingQuestions,
-                config.count
-              );
-
-
-            if (!questions.length) {
-
-              alert(
-                "No questions available for this mock yet."
-              );
-
-              return;
-
-            }
-
-
-            const session = {
-
-              questions: questions,
-
-              mode: "mock",
-
-              duration: 900,
-
-              exam: config.exam,
-
-              subject: config.subject,
-
-              topic: config.topic
-
-            };
-
-
-            sessionStorage.setItem(
-              "physicsPrepSession",
-              JSON.stringify(session)
+          questions =
+            questions.filter(q =>
+              !q.difficulty ||
+              config.allowedDifficulty.includes(q.difficulty)
             );
 
+        }
 
-            window.location.href =
-              "test.html";
+      }
 
-          }
+
+      /*
+       * Random selection
+       */
+
+      const selected =
+        QuestionEngine.sample(
+          questions,
+          config.count
         );
 
-      });
 
-  }
+      /*
+       * No questions
+       */
+
+      if (!selected.length) {
+
+        alert(
+          "No suitable questions are available yet. " +
+          "Please add more questions to the question bank."
+        );
+
+        return;
+
+      }
+
+
+      /*
+       * Save test session
+       */
+
+      sessionStorage.setItem(
+
+        "physicsPrepSession",
+
+        JSON.stringify({
+
+          questions: selected,
+
+          mode: config.id,
+
+          duration: config.duration,
+
+          title: config.title
+
+        })
+
+      );
+
+
+      /*
+       * Open CBT interface
+       */
+
+      location.href = "test.html";
+
+    });
+
+  });
+
+}
 
 
   /* =========================================================
