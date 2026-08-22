@@ -18,8 +18,8 @@ window.QuestionEngine = (() => {
       : []),
 
    // Thermodynamics & Statistical Mechanics
-    ...(Array.isArray(window.PHYSICS_QUESTIONS_THERMAL_STAT)
-      ? window.PHYSICS_QUESTIONS_THERMAL_STAT
+    ...(Array.isArray(window.PHYSICS_QUESTIONS_THERMO_SM )
+      ? window.PHYSICS_QUESTIONS_THERMO_SM
       : [])
 
   ];
