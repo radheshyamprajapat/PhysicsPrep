@@ -1,20 +1,262 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Test — PhysicsPrep</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"></head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Test — PhysicsPrep</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Website CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+  <!-- =====================================================
+       MATHJAX CONFIGURATION
+       Used for Physics / Mathematics equations
+  ====================================================== -->
+
+  <script>
+    window.MathJax = {
+
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ],
+
+        displayMath: [
+          ['$$', '$$'],
+          ['\\[', '\\]']
+        ]
+      },
+
+      svg: {
+        fontCache: 'global'
+      }
+
+    };
+  </script>
+
+
+  <!-- MathJax -->
+  <script
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+
+</head>
+
+
 <body data-page="test">
-<header class="test-header"><div class="container test-top"><a class="brand" href="index.html"><span class="brand-icon">⚛</span><span>PhysicsPrep</span></a><div class="test-status"><span id="progress">Question 1 / 10</span><span class="timer" id="timer">15:00</span></div></div></header>
-<main class="test-main"><div class="container test-container">
-<div id="questionMeta" class="question-meta"></div>
-<section class="question-card">
-<div class="question-number" id="questionNumber">Question 1</div>
-<h1 id="questionText">Loading question…</h1>
-<div id="options" class="options"></div>
-</section>
-<div class="test-controls"><button id="prevBtn" class="btn btn-secondary">← Previous</button><button id="nextBtn" class="btn btn-primary">Next →</button><button id="finishBtn" class="btn btn-success hidden">Finish Test ✓</button></div>
-<div class="keyboard-hint">Tip: use <kbd>1</kbd>–<kbd>4</kbd> to select an answer.</div>
-</div></main>
-<script src="data/questions/quantum.js"></script><script src="js/question-engine.js"></script><script src="js/test-engine.js"></script>
-</body></html>
+
+
+  <!-- =====================================================
+       TEST HEADER
+  ====================================================== -->
+
+  <header class="test-header">
+
+    <div class="container test-top">
+
+      <a class="brand" href="index.html">
+
+        <span class="brand-icon">⚛</span>
+
+        <span>PhysicsPrep</span>
+
+      </a>
+
+
+      <div class="test-status">
+
+        <span id="progress">
+          Question 1 / 10
+        </span>
+
+        <span
+          class="timer"
+          id="timer">
+          15:00
+        </span>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       TEST AREA
+  ====================================================== -->
+
+  <main class="test-main">
+
+    <div class="container test-container">
+
+
+      <!-- Question metadata -->
+
+      <div
+        id="questionMeta"
+        class="question-meta">
+      </div>
+
+
+      <!-- Question card -->
+
+      <section class="question-card">
+
+
+        <div
+          class="question-number"
+          id="questionNumber">
+
+          Question 1
+
+        </div>
+
+
+        <!-- Question -->
+
+        <h1 id="questionText">
+          Loading question…
+        </h1>
+
+
+        <!-- Options -->
+
+        <div
+          id="options"
+          class="options">
+        </div>
+
+
+      </section>
+
+
+      <!-- =================================================
+           CONTROLS
+      ================================================== -->
+
+      <div class="test-controls">
+
+        <button
+          id="prevBtn"
+          class="btn btn-secondary">
+
+          ← Previous
+
+        </button>
+
+
+        <button
+          id="nextBtn"
+          class="btn btn-primary">
+
+          Next →
+
+        </button>
+
+
+        <button
+          id="finishBtn"
+          class="btn btn-success hidden">
+
+          Finish Test ✓
+
+        </button>
+
+      </div>
+
+
+      <!-- Keyboard hint -->
+
+      <div class="keyboard-hint">
+
+        Tip: use
+        <kbd>1</kbd>–
+        <kbd>4</kbd>
+        to select an answer.
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       QUESTION DATA
+  ====================================================== -->
+
+  <script src="data/questions/quantum/1d-potential.js"></script>
+
+
+  <!-- Question engine -->
+
+  <script src="js/question-engine.js"></script>
+
+
+  <!-- Test engine -->
+
+  <script src="js/test-engine.js"></script>
+
+
+
+  <!-- =====================================================
+       MATHJAX RE-RENDERING
+  ====================================================== -->
+
+  <script>
+
+    /*
+      test-engine.js dynamically changes the question
+      and options.
+
+      Therefore MathJax needs to be told to render the
+      newly inserted content every time a question changes.
+    */
+
+    window.renderMath = function () {
+
+      if (
+        window.MathJax &&
+        typeof MathJax.typesetPromise === "function"
+      ) {
+
+        MathJax.typesetPromise()
+          .catch(function (error) {
+
+            console.error(
+              "MathJax rendering error:",
+              error
+            );
+
+          });
+
+      }
+
+    };
+
+
+  </script>
+
+
+</body>
+
+</html>
