@@ -1,19 +1,114 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Result — PhysicsPrep</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Result — PhysicsPrep</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"></head>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/result.css">
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
 <body data-page="result">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-icon">⚛</span><span>PhysicsPrep</span></a><nav class="main-nav"><a href="index.html">Home</a><a href="practice.html">Practice</a><a href="mock.html">Mock Test</a><a href="pyq.html">PYQs</a></nav></div></header>
-<main class="result-main"><div class="container result-wrap">
-<div class="result-hero"><div class="result-emoji">🎉</div><span class="eyebrow">SESSION COMPLETE</span><h1>Test Complete</h1><p id="resultMessage">Nice work. Review your performance and practice again.</p></div>
-<div class="score-card"><span>Score</span><strong id="score">0 / 0</strong><div class="score-bar"><i id="scoreBar"></i></div><b id="accuracy">0%</b><small>Accuracy</small></div>
-<div class="result-stats">
-<div><span class="stat-icon correct">✓</span><b id="correct">0</b><small>Correct</small></div>
-<div><span class="stat-icon wrong">×</span><b id="wrong">0</b><small>Wrong</small></div>
-<div><span class="stat-icon skipped">–</span><b id="skipped">0</b><small>Skipped</small></div>
-</div>
-<div class="result-actions"><a class="btn btn-primary" href="practice.html">Practice Again</a><a class="btn btn-secondary" href="index.html">Go Home</a></div>
-</div></main>
-<script src="js/result-engine.js"></script></body></html>
+
+<header class="cbt-header result-header">
+  <div class="cbt-brand">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">⚛</span><span>PhysicsPrep</span>
+    </a>
+    <span class="cbt-title">Test Result</span>
+  </div>
+  <a href="practice.html" class="result-home-btn">Practice More →</a>
+</header>
+
+<main class="result-main">
+  <div class="result-container">
+
+    <section class="result-hero">
+      <div class="result-hero-icon" id="heroIcon">✓</div>
+      <div>
+        <span class="result-eyebrow">TEST COMPLETED</span>
+        <h1 id="resultTitle">Great attempt!</h1>
+        <p id="resultSubtitle">Review your answers and learn from your mistakes.</p>
+      </div>
+    </section>
+
+    <section class="score-card">
+      <div class="score-main">
+        <span class="score-label">Your Score</span>
+        <strong id="score">0 / 0</strong>
+        <span id="percentage">0%</span>
+      </div>
+
+      <div class="score-stats">
+        <div class="stat correct">
+          <span class="stat-icon">✓</span>
+          <div><strong id="correct">0</strong><small>Correct</small></div>
+        </div>
+        <div class="stat wrong">
+          <span class="stat-icon">×</span>
+          <div><strong id="wrong">0</strong><small>Wrong</small></div>
+        </div>
+        <div class="stat skipped">
+          <span class="stat-icon">−</span>
+          <div><strong id="skipped">0</strong><small>Skipped</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="result-actions">
+      <button id="wrongPracticeBtn" class="result-btn primary">Practice Wrong Questions Again →</button>
+      <a href="practice.html" class="result-btn secondary">Back to Practice</a>
+    </section>
+
+    <section class="review-section">
+      <div class="review-heading">
+        <div>
+          <span class="result-eyebrow">ANSWER REVIEW</span>
+          <h2>Review Your Answers</h2>
+        </div>
+        <span id="reviewCount" class="review-count">0 Questions</span>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="wrong">Wrong</button>
+        <button class="filter-tab" data-filter="correct">Correct</button>
+        <button class="filter-tab" data-filter="skipped">Skipped</button>
+      </div>
+
+      <div id="reviewList" class="review-list"></div>
+      <div id="emptyReview" class="empty-review hidden">
+        <div>🎉</div>
+        <h3>Nothing to review here</h3>
+        <p>There are no questions in this category.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="result-footer">
+  <span>⚛ PhysicsPrep</span>
+  <span>Practice • Test • Review • Improve</span>
+</footer>
+
+<script src="js/result.js"></script>
+</body>
+</html>
