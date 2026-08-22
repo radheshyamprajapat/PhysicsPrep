@@ -17,8 +17,10 @@ window.QuestionEngine = (() => {
       ? window.PHYSICS_QUESTIONS_ATOMIC_MOLECULAR
       : []),
 
-     ...(Array.isArray(window.PHYSICS_QUESTIONS_THERMO_SM)
-    ? window.PHYSICS_QUESTIONS_THERMAL_STAT : [])
+   // Thermodynamics & Statistical Mechanics
+    ...(Array.isArray(window.PHYSICS_QUESTIONS_THERMAL_STAT)
+      ? window.PHYSICS_QUESTIONS_THERMAL_STAT
+      : [])
 
   ];
 
