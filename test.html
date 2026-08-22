@@ -1,265 +1,104 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test — PhysicsPrep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/test.css">
 
-  <title>Test — PhysicsPrep</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- Website CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-
-
-  <!-- =====================================================
-       MATHJAX CONFIGURATION
-       Used for Physics / Mathematics equations
-  ====================================================== -->
-
-  <script>
-    window.MathJax = {
-
-      tex: {
-        inlineMath: [
-          ['$', '$'],
-          ['\\(', '\\)']
-        ],
-
-        displayMath: [
-          ['$$', '$$'],
-          ['\\[', '\\]']
-        ]
-      },
-
-      svg: {
-        fontCache: 'global'
-      }
-
-    };
-  </script>
-
-
-  <!-- MathJax -->
-  <script
-    async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-  </script>
-
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-
 
 <body data-page="test">
 
+<header class="cbt-header">
+  <div class="cbt-brand">
+    <a class="brand" href="index.html"><span class="brand-icon">⚛</span><span>PhysicsPrep</span></a>
+    <span class="cbt-title">Online Test</span>
+  </div>
+  <div class="cbt-header-right">
+    <button id="paletteMobileBtn" class="mobile-palette-btn" type="button">☷ Questions</button>
+    <div class="cbt-timer"><span>Time Left</span><strong id="timer">15:00</strong></div>
+  </div>
+</header>
 
-  <!-- =====================================================
-       TEST HEADER
-  ====================================================== -->
-
-  <header class="test-header">
-
-    <div class="container test-top">
-
-      <a class="brand" href="index.html">
-
-        <span class="brand-icon">⚛</span>
-
-        <span>PhysicsPrep</span>
-
-      </a>
-
-
-      <div class="test-status">
-
-        <span id="progress">
-          Question 1 / 10
-        </span>
-
-        <span
-          class="timer"
-          id="timer">
-          15:00
-        </span>
-
+<div class="cbt-layout">
+  <main class="cbt-main">
+    <div class="test-info">
+      <div>
+        <span class="test-label" id="testSubject">Physics</span>
+        <span class="test-topic" id="testTopic"></span>
       </div>
-
+      <div class="progress-text" id="progress">Question 1 / 10</div>
     </div>
 
-  </header>
-
-
-
-  <!-- =====================================================
-       TEST AREA
-  ====================================================== -->
-
-  <main class="test-main">
-
-    <div class="container test-container">
-
-
-      <!-- Question metadata -->
-
-      <div
-        id="questionMeta"
-        class="question-meta">
+    <section class="cbt-question-card">
+      <div class="question-topline">
+        <h1 id="questionNumber">Question 1</h1>
+        <span id="questionMeta" class="question-meta"></span>
       </div>
+      <div id="questionText" class="question-text">Loading question…</div>
+      <div id="options" class="cbt-options"></div>
+    </section>
 
-
-      <!-- Question card -->
-
-      <section class="question-card">
-
-
-        <div
-          class="question-number"
-          id="questionNumber">
-
-          Question 1
-
-        </div>
-
-
-        <!-- Question -->
-
-        <h1 id="questionText">
-          Loading question…
-        </h1>
-
-
-        <!-- Options -->
-
-        <div
-          id="options"
-          class="options">
-        </div>
-
-
-      </section>
-
-
-      <!-- =================================================
-           CONTROLS
-      ================================================== -->
-
-      <div class="test-controls">
-
-        <button
-          id="prevBtn"
-          class="btn btn-secondary">
-
-          ← Previous
-
-        </button>
-
-
-        <button
-          id="nextBtn"
-          class="btn btn-primary">
-
-          Next →
-
-        </button>
-
-
-        <button
-          id="finishBtn"
-          class="btn btn-success hidden">
-
-          Finish Test ✓
-
-        </button>
-
+    <div class="cbt-actions">
+      <div class="left-actions">
+        <button id="clearBtn" class="cbt-btn outline" type="button">Clear Response</button>
+        <button id="markBtn" class="cbt-btn review" type="button">Mark for Review &amp; Next</button>
       </div>
-
-
-      <!-- Keyboard hint -->
-
-      <div class="keyboard-hint">
-
-        Tip: use
-        <kbd>1</kbd>–
-        <kbd>4</kbd>
-        to select an answer.
-
+      <div class="right-actions">
+        <button id="prevBtn" class="cbt-btn secondary" type="button">← Previous</button>
+        <button id="nextBtn" class="cbt-btn primary" type="button">Save &amp; Next →</button>
+        <button id="finishBtn" class="cbt-btn submit hidden" type="button">Submit Test</button>
       </div>
-
-
     </div>
 
+    <div class="keyboard-hint"><kbd>1</kbd>–<kbd>4</kbd> answer &nbsp; <kbd>←</kbd><kbd>→</kbd> navigate</div>
   </main>
 
+  <aside class="cbt-sidebar" id="questionPalette">
+    <div class="palette-head">
+      <div><h2>Question Palette</h2><p id="paletteCount">10 Questions</p></div>
+      <button id="closePalette" class="close-palette" type="button">×</button>
+    </div>
 
+    <div class="palette-status">
+      <span><i class="dot answered"></i> Answered</span>
+      <span><i class="dot notanswered"></i> Not Answered</span>
+      <span><i class="dot marked"></i> Marked</span>
+      <span><i class="dot visited"></i> Not Visited</span>
+    </div>
 
-  <!-- =====================================================
-       QUESTION DATA
-  ====================================================== -->
+    <div id="paletteGrid" class="palette-grid"></div>
 
-  <script src="data/questions/quantum/1d-potential.js"></script> 
+    <div class="palette-bottom">
+      <p>Review your responses before submitting.</p>
+      <button id="submitSideBtn" class="cbt-btn submit full" type="button">Submit Test</button>
+    </div>
+  </aside>
+</div>
 
-<script src="data/questions/nuclear.js"></script> 
-  <script src="data/questions/atomic-molecular.js"></script>
+<div class="palette-overlay" id="paletteOverlay"></div>
 
-
-  <!-- Question engine -->
-
-  <script src="js/question-engine.js"></script>
-
-
-  <!-- Test engine -->
-
-  <script src="js/test-engine.js"></script>
-
-
-
-  <!-- =====================================================
-       MATHJAX RE-RENDERING
-  ====================================================== -->
-
-  <script>
-
-    /*
-      test-engine.js dynamically changes the question
-      and options.
-
-      Therefore MathJax needs to be told to render the
-      newly inserted content every time a question changes.
-    */
-
-    window.renderMath = function () {
-
-      if (
-        window.MathJax &&
-        typeof MathJax.typesetPromise === "function"
-      ) {
-
-        MathJax.typesetPromise()
-          .catch(function (error) {
-
-            console.error(
-              "MathJax rendering error:",
-              error
-            );
-
-          });
-
-      }
-
-    };
-
-
-  </script>
-
-
+<!-- Keep your existing question files here. Add future banks in the same place. -->
+<script src="data/questions/quantum/1d-potential.js"></script>
+<script src="data/questions/nuclear.js"></script>
+<script src="data/questions/atomic-molecular.js"></script>
+<script src="js/question-engine.js"></script>
+<script src="js/test-engine.js"></script>
 </body>
-
 </html>
