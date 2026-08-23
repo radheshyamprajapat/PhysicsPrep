@@ -1,0 +1,584 @@
+/* =========================================================
+   PHYSICSPREP — TEST SERIES
+   ========================================================= */
+
+.series-hero {
+  margin: 28px 0 48px;
+  padding: 42px 46px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #eff6ff, #f8fbff);
+  border: 1px solid #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.series-hero-content {
+  max-width: 650px;
+}
+
+.series-hero h1 {
+  margin: 10px 0 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  color: #172554;
+}
+
+.series-hero h1 span {
+  color: #2563eb;
+}
+
+.series-hero p {
+  max-width: 590px;
+  margin: 0 0 22px;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-points span {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  color: #334155;
+  padding: 9px 13px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-visual {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-atom {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #bfdbfe;
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 76px;
+  color: #2563eb;
+
+  left: 55px;
+  top: 35px;
+}
+
+.floating-badge {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  padding: 9px 13px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #1e40af;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.badge-one {
+  top: 10px;
+  left: 0;
+}
+
+.badge-two {
+  right: 0;
+  top: 80px;
+}
+
+.badge-three {
+  left: 20px;
+  bottom: 15px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.series-section {
+  margin-bottom: 58px;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 4px 0 5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  color: #172554;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   SERIES GRID
+   ========================================================= */
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+
+/* =========================================================
+   PAID CARD
+   ========================================================= */
+
+.series-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.series-card:hover {
+  transform: translateY(-5px);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.09);
+}
+
+
+/* =========================================================
+   THUMBNAIL
+   ========================================================= */
+
+.series-thumbnail {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background: #eff6ff;
+}
+
+.series-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #eff6ff
+  );
+
+  color: #2563eb;
+  font-size: 52px;
+}
+
+
+/* Badge on thumbnail */
+
+.series-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #1d4ed8;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.series-card-body {
+  padding: 20px;
+}
+
+.series-card-body h3 {
+  margin: 0 0 8px;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
+
+  color: #172554;
+}
+
+.series-description {
+  margin: 0 0 16px;
+
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.55;
+
+  min-height: 44px;
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.series-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-bottom: 18px;
+}
+
+.series-meta span {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+
+  color: #475569;
+
+  padding: 6px 9px;
+  border-radius: 7px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PRICE + BUTTON
+   ========================================================= */
+
+.series-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.series-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.series-price .currency {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.series-price .amount {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #172554;
+}
+
+.series-price .old-price {
+  color: #94a3b8;
+  text-decoration: line-through;
+  font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.series-buy-btn {
+  border: 0;
+  cursor: pointer;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 0.82rem;
+
+  text-decoration: none;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.series-buy-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FREE TESTS
+   ========================================================= */
+
+.free-section {
+  padding-top: 5px;
+}
+
+.free-test-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.free-test-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 22px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.free-test-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.free-icon {
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+  border-radius: 16px;
+
+  font-size: 30px;
+}
+
+.free-test-content {
+  flex: 1;
+}
+
+.free-label {
+  font-size: 0.68rem;
+  font-weight: 900;
+  color: #16a34a;
+}
+
+.free-test-content h3 {
+  margin: 3px 0 6px;
+
+  font-family: "Nunito", sans-serif;
+  color: #172554;
+  font-size: 1.15rem;
+}
+
+.free-test-content p {
+  margin: 0 0 12px;
+
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.free-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   COMING SOON
+   ========================================================= */
+
+.coming-section {
+  margin: 10px 0 55px;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 18px;
+}
+
+.coming-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 15px;
+
+  font-size: 28px;
+}
+
+.coming-section h2 {
+  margin: 4px 0 5px;
+
+  font-family: "Nunito", sans-serif;
+  color: #78350f;
+  font-size: 1.35rem;
+}
+
+.coming-section p {
+  margin: 0;
+
+  color: #92400e;
+  font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .series-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .series-hero {
+    padding: 35px;
+  }
+
+  .hero-visual {
+    width: 250px;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  .series-hero {
+    padding: 28px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 190px;
+  }
+
+  .hero-atom {
+    width: 130px;
+    height: 130px;
+    font-size: 58px;
+    left: calc(50% - 65px);
+    top: 25px;
+  }
+
+  .badge-one {
+    left: 10%;
+  }
+
+  .badge-two {
+    right: 8%;
+    top: 60px;
+  }
+
+  .badge-three {
+    left: 15%;
+    bottom: 5px;
+  }
+
+  .series-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .free-test-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .series-hero {
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+
+  .series-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-points {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .series-thumbnail {
+    height: 175px;
+  }
+
+  .free-test-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .series-bottom {
+    align-items: flex-start;
+  }
+
+  .coming-section {
+    align-items: flex-start;
+  }
+
+}
