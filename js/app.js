@@ -508,7 +508,61 @@
       title: "BARC Physics — Full Length Mock 01",
 
       desc:
-        "100 mixed Physics MCQs • 2 hours • Easy + Moderate",
+        "100 mixed Physics MCQs • 2 hours ",
+
+      count: 100,
+
+      duration: 120 * 60,
+
+      exam: "",
+
+      subject: "",
+
+      topic: "",
+
+      allowedTypes: ["PYQ"],
+
+      allowedDifficulty: ["Easy", "Moderate"],
+
+      icon: "⚛️",
+
+      featured: true
+    },
+
+     {
+      id: "barc-full-02",
+
+      title: "BARC Physics — Full Length Mock 02",
+
+      desc:
+        "100 mixed Physics MCQs • 2 hours ",
+
+      count: 100,
+
+      duration: 120 * 60,
+
+      exam: "",
+
+      subject: "",
+
+      topic: "",
+
+      allowedTypes: ["PYQ"],
+
+      allowedDifficulty: ["Easy", "Moderate"],
+
+      icon: "⚛️",
+
+      featured: true
+    },
+
+     {
+      id: "barc-full-03",
+
+      title: "BARC Physics — Full Length Mock 03",
+
+      desc:
+        "100 mixed Physics MCQs • 2 hours ",
 
       count: 100,
 
@@ -538,9 +592,9 @@
       desc:
         "Random questions from Quantum Mechanics",
 
-      count: 10,
+      count: 25,
 
-      duration: 15 * 60,
+      duration: 30 * 60,
 
       exam: "",
 
@@ -560,9 +614,9 @@
       desc:
         "Questions from all available Physics topics",
 
-      count: 10,
+      count: 25,
 
-      duration: 15 * 60,
+      duration: 30 * 60,
 
       exam: "",
 
