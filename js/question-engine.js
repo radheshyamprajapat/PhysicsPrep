@@ -24,7 +24,8 @@ window.QuestionEngine = (() => {
 
      //classical_mechanics
      ...(Array.isArray(window.PHYSICS_QUESTIONS_CLASSICAL_MECHANICS)
-    ? window.PHYSICS_QUESTIONS_CLASSICAL_MECHANICS : [])
+    ? window.PHYSICS_QUESTIONS_CLASSICAL_MECHANICS 
+      : [])
 
 
   ];
