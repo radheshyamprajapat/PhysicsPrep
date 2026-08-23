@@ -17,9 +17,15 @@ window.QuestionEngine = (() => {
       ? window.PHYSICS_QUESTIONS_ATOMIC_MOLECULAR
       : []),
 
+     // thermal physics 
      ...(Array.isArray(window.PHYSICS_QUESTIONS_THERMAL)
       ? window.PHYSICS_QUESTIONS_THERMAL
-      : [])
+      : []),
+
+     //classical_mechanics
+     ...(Array.isArray(window.PHYSICS_QUESTIONS_CLASSICAL_MECHANICS)
+    ? window.PHYSICS_QUESTIONS_CLASSICAL_MECHANICS : [])
+
 
   ];
 
