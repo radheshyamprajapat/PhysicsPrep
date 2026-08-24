@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Topic-wise Physics PYQ solutions for CSIR NET, GATE, JEST, TIFR and other Physics exams.">
 
     <title>Physics Solutions | PhysicsPrep</title>
 
@@ -12,6 +16,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/solutions.css">
 </head>
+
 
 <body>
 
@@ -23,15 +28,35 @@
             PhysicsPrep
         </a>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="practice.html">Practice</a>
-            <a href="mock.html">Mock Test</a>
-            <a href="pyq.html">PYQs</a> 
-             <a href="test.html">Test Series</a> 
-            <a href="solutions.html" class="active">
+        <button class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="practice.html">
+                Practice
+            </a>
+
+            <a href="mock.html">
+                Mock Test
+            </a>
+
+            <a href="pyq.html">
+                PYQs
+            </a>
+
+            <a href="solutions.html"
+               class="active">
                 Solutions
             </a>
+
         </div>
 
     </nav>
@@ -40,6 +65,8 @@
 
 
 <main>
+
+    <!-- HERO -->
 
     <section class="solutions-hero">
 
@@ -55,8 +82,7 @@
 
             <p>
                 Topic-wise detailed solutions for
-                CSIR-NET, GATE, JEST, TIFR and other
-                Physics examinations.
+                Physics competitive examinations.
             </p>
 
         </div>
@@ -64,21 +90,64 @@
     </section>
 
 
+    <!-- SEARCH -->
+
+    <section class="solutions-tools">
+
+        <div class="solutions-search">
+
+            <span>🔎</span>
+
+            <input
+                type="search"
+                id="solutionSearch"
+                placeholder="Search subject or topic..."
+                autocomplete="off"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- SOLUTIONS -->
+
     <section class="solutions-section">
 
         <div class="section-heading">
 
-            <h2>Choose Your Subject</h2>
+            <h2>
+                Subject-wise Solutions
+            </h2>
 
             <p>
-                Select a subject to explore topic-wise
-                solutions.
+                Select a topic to open the solution PDF.
             </p>
 
         </div>
 
+
         <div id="solutionsContainer"
              class="solutions-container">
+        </div>
+
+
+        <div id="noSolutions"
+             class="no-solutions"
+             hidden>
+
+            <div class="no-solutions-icon">
+                🔍
+            </div>
+
+            <h3>
+                No topic found
+            </h3>
+
+            <p>
+                Try another subject or topic name.
+            </p>
+
         </div>
 
     </section>
@@ -86,8 +155,12 @@
 </main>
 
 
-<footer>
-    <p>© 2026 PhysicsPrep. All rights reserved.</p>
+<footer class="site-footer">
+
+    <p>
+        © 2026 PhysicsPrep. All rights reserved.
+    </p>
+
 </footer>
 
 
@@ -95,4 +168,5 @@
 <script src="js/solutions.js"></script>
 
 </body>
+
 </html>
