@@ -16,6 +16,11 @@ window.QuestionEngine = (() => {
     ...(Array.isArray(  window.PHYSICS_QUESTIONS_HARMONIC_OSCILLATOR)
       ?  window.PHYSICS_QUESTIONS_HARMONIC_OSCILLATOR
       : []),
+
+      // Quantum Mechanics — PERTURBATION_THEORY
+    ...(Array.isArray(  window.PHYSICS_QUESTIONS_PERTURBATION_THEORY)
+      ?  window.PHYSICS_QUESTIONS_PERTURBATION_THEORY
+      : []),
   
 
     // Nuclear Physics
