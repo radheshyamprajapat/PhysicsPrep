@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PYQ Analysis — PhysicsPrep</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/analysis.css">
+</head>
+
+<body data-page="analysis">
+
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+      <span class="brand-icon">⚛</span>
+      <span>PhysicsPrep</span>
+    </a>
+
+    <button class="menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="practice.html">Practice</a>
+      <a href="mock.html">Mock Test</a>
+      <a href="test-series.html">Test Series</a>
+      <a href="pyq.html">PYQs</a>
+      <a class="active" href="analysis.html">Analysis</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="analysis-main">
+
+<div class="container">
+
+  <!-- HERO -->
+
+  <section class="analysis-hero">
+
+    <div>
+      <span class="eyebrow">PYQ INTELLIGENCE</span>
+
+      <h1>
+        Understand the PYQs.<br>
+        <span>Study Smarter.</span>
+      </h1>
+
+      <p>
+        Explore topic frequency, yearly trends and PYQ priority
+        to decide what to practice first.
+      </p>
+    </div>
+
+    <div class="analysis-hero-icon">
+      📊
+    </div>
+
+  </section>
+
+
+  <!-- FILTERS -->
+
+  <section class="analysis-filter-card">
+
+    <div class="filter-heading">
+      <div>
+        <h2>Explore PYQs</h2>
+        <p>Select a subject to analyse its previous-year questions.</p>
+      </div>
+    </div>
+
+    <div class="analysis-filters">
+
+      <label>
+        Exam
+
+        <select id="examSelect">
+          <option value="">All Exams</option>
+        </select>
+
+      </label>
+
+      <label>
+        Subject
+
+        <select id="subjectSelect">
+          <option value="">Select Subject</option>
+        </select>
+
+      </label>
+
+      <label>
+        Year Range
+
+        <select id="yearRange">
+          <option value="all">All Years</option>
+          <option value="5">Last 5 Years</option>
+          <option value="10">Last 10 Years</option>
+        </select>
+
+      </label>
+
+    </div>
+
+  </section>
+
+
+  <!-- OVERVIEW -->
+
+  <section class="overview-grid">
+
+    <article class="overview-card blue">
+      <span class="overview-icon">📚</span>
+      <span class="overview-label">Total PYQs</span>
+      <strong id="totalQuestions">0</strong>
+    </article>
+
+    <article class="overview-card purple">
+      <span class="overview-icon">🎯</span>
+      <span class="overview-label">Topics</span>
+      <strong id="totalTopics">0</strong>
+    </article>
+
+    <article class="overview-card green">
+      <span class="overview-icon">📅</span>
+      <span class="overview-label">Years Covered</span>
+      <strong id="totalYears">0</strong>
+    </article>
+
+    <article class="overview-card orange">
+      <span class="overview-icon">🔥</span>
+      <span class="overview-label">Top Topic</span>
+      <strong id="topTopic">—</strong>
+    </article>
+
+  </section>
+
+
+  <!-- TOPIC PRIORITY -->
+
+  <section class="analysis-section">
+
+    <div class="section-title">
+      <div>
+        <span class="eyebrow">TOPIC PRIORITY</span>
+        <h2>What has been asked most?</h2>
+        <p>
+          Topics are ranked using PYQ frequency and consistency.
+        </p>
+      </div>
+    </div>
+
+    <div id="topicPriority" class="topic-grid"></div>
+
+  </section>
+
+
+  <!-- TWO COLUMN -->
+
+  <section class="analysis-two-column">
+
+
+    <!-- DISTRIBUTION -->
+
+    <article class="analysis-panel">
+
+      <div class="panel-heading">
+        <div>
+          <span class="panel-icon">📊</span>
+          <div>
+            <h2>Topic Distribution</h2>
+            <p>PYQs by topic</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="topicDistribution"
+           class="distribution-list"></div>
+
+    </article>
+
+
+    <!-- YEAR TREND -->
+
+    <article class="analysis-panel">
+
+      <div class="panel-heading">
+
+        <div>
+          <span class="panel-icon">📈</span>
+
+          <div>
+            <h2>Year-wise Trend</h2>
+            <p>Questions asked each year</p>
+          </div>
+        </div>
+
+        <select id="trendTopic">
+          <option value="">All Topics</option>
+        </select>
+
+      </div>
+
+      <div id="yearTrend"
+           class="year-trend"></div>
+
+    </article>
+
+  </section>
+
+
+  <!-- HEATMAP -->
+
+  <section class="analysis-section">
+
+    <div class="section-title">
+
+      <div>
+        <span class="eyebrow">YEAR × TOPIC</span>
+
+        <h2>PYQ Heatmap</h2>
+
+        <p>
+          See which topics appeared across different years.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="heatmap-wrapper">
+
+      <div id="heatmap"
+           class="heatmap"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STUDY FIRST -->
+
+  <section class="priority-section">
+
+    <div class="priority-header">
+
+      <div>
+        <span class="eyebrow">SMART STUDY</span>
+
+        <h2>What should I study first?</h2>
+
+        <p>
+          Start with topics that have strong PYQ presence.
+        </p>
+      </div>
+
+      <span class="target-icon">🎯</span>
+
+    </div>
+
+    <div id="studyFirst"
+         class="study-list"></div>
+
+  </section>
+
+
+  <!-- TOPIC DETAIL -->
+
+  <section id="topicDetail"
+           class="topic-detail hidden">
+
+    <div class="detail-header">
+
+      <div>
+        <span class="eyebrow">TOPIC ANALYSIS</span>
+
+        <h2 id="detailTopic">Topic</h2>
+
+        <p id="detailSummary"></p>
+      </div>
+
+      <button id="closeDetail"
+              class="detail-close">
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="detail-stats">
+
+      <div>
+        <span>PYQs</span>
+        <strong id="detailQuestions">0</strong>
+      </div>
+
+      <div>
+        <span>Years</span>
+        <strong id="detailYears">0</strong>
+      </div>
+
+      <div>
+        <span>Priority</span>
+        <strong id="detailPriority">—</strong>
+      </div>
+
+    </div>
+
+
+    <div class="detail-chart">
+
+      <h3>Year-wise questions</h3>
+
+      <div id="detailYearChart"></div>
+
+    </div>
+
+
+    <button id="practiceTopic"
+            class="btn btn-primary btn-large">
+      Practice This Topic →
+    </button>
+
+  </section>
+
+
+  <!-- EMPTY -->
+
+  <section id="emptyState"
+           class="empty-analysis">
+
+    <div>📊</div>
+
+    <h2>Select a subject to begin</h2>
+
+    <p>
+      Choose a subject above and explore its PYQ trends.
+    </p>
+
+  </section>
+
+
+</div>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <b>⚛ PhysicsPrep</b>
+
+    <span>
+      PYQ analysis powered by your question bank.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- QUESTION DATA -->
+
+<script src="data/questions/quantum.js"></script>
+<script src="data/questions/nuclear.js"></script>
+<script src="data/questions/atomic_molecular.js"></script>
+<script src="data/questions/thermal.js"></script>
+<script src="data/questions/classical_mechanics.js"></script>
+<script src="data/questions/solid_state.js"></script>
+
+<script src="js/question-engine.js"></script>
+<script src="js/analysis.js"></script>
+
+</body>
+</html>
