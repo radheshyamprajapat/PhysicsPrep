@@ -6,6 +6,11 @@ window.QuestionEngine = (() => {
     ...(Array.isArray(window.PHYSICS_QUESTIONS_1D_POTENTIAL)
       ? window.PHYSICS_QUESTIONS_1D_POTENTIAL
       : []),
+    
+     // Quantum Mechanics — angular-momentum
+    ...(Array.isArray(window.PHYSICS_QUESTIONS_ANGULAR_MOMENTUM)
+      ? window.PHYSICS_QUESTIONS_ANGULAR_MOMENTUM
+      : []),
 
     // Nuclear Physics
     ...(Array.isArray(window.PHYSICS_QUESTIONS_NUCLEAR)
