@@ -547,10 +547,8 @@ window.PHYSICS_QUESTIONS_PERTURBATION_THEORY = [
       "\\(-q\\pi E_0\\)"
     ],
     answer: 1
-  }
-];
+  },
 
-window.PHYSICS_QUESTIONS_SPIN_DYNAMICS = [
   {
     id: "qm-sd-csir-2011-jun-0001",
     exam: "CSIR NET",
@@ -771,10 +769,9 @@ window.PHYSICS_QUESTIONS_SPIN_DYNAMICS = [
       "0"
     ],
     answer: 2
-  }
-];
+  },
 
-window.PHYSICS_QUESTIONS_APPROXIMATION_METHOD = [
+
   {
     id: "qm-am-csir-2011-jun-0001",
     exam: "CSIR NET",
@@ -910,10 +907,8 @@ window.PHYSICS_QUESTIONS_APPROXIMATION_METHOD = [
       "\\(\\frac{1}{2}\\sqrt{\\frac{\\alpha^2 + \\beta^2}{2}}\\)"
     ],
     answer: 1
-  }
-];
+  },
 
-window.PHYSICS_QUESTIONS_IDENTICAL_PARTICLES = [
   {
     id: "qm-ip-csir-2012-dec-0001",
     exam: "CSIR NET",
@@ -1066,10 +1061,7 @@ window.PHYSICS_QUESTIONS_IDENTICAL_PARTICLES = [
       "\\(\\frac{1}{4}\\hbar^2\\)"
     ],
     answer: 1
-  }
-];
-
-window.PHYSICS_QUESTIONS_SCATTERING_THEORY = [
+  },
   {
     id: "qm-st-csir-2012-jun-0001",
     exam: "CSIR NET",
