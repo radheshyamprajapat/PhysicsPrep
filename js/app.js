@@ -520,7 +520,7 @@
 
       topic: "",
 
-      allowedTypes: ["PYQ"],
+      allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
 
@@ -547,7 +547,7 @@
 
       topic: "",
 
-      allowedTypes: ["PYQ"],
+      allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
 
@@ -574,7 +574,7 @@
 
       topic: "",
 
-      allowedTypes: ["PYQ"],
+      allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
 
