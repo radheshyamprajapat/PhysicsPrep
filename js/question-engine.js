@@ -12,6 +12,12 @@ window.QuestionEngine = (() => {
       ? window.PHYSICS_QUESTIONS_ANGULAR_MOMENTUM
       : []),
 
+      // Quantum Mechanics — HARMONIC_OSCILLATOR
+    ...(Array.isArray(  window.PHYSICS_QUESTIONS_HARMONIC_OSCILLATOR)
+      ?  window.PHYSICS_QUESTIONS_HARMONIC_OSCILLATOR
+      : []),
+  
+
     // Nuclear Physics
     ...(Array.isArray(window.PHYSICS_QUESTIONS_NUCLEAR)
       ? window.PHYSICS_QUESTIONS_NUCLEAR
