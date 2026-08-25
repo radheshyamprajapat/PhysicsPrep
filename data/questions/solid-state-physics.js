@@ -1,7 +1,4 @@
-/**
- * PhysicsPrep Question Bank - Solid State Physics
- * Extracted and formatted from Solid State Physics PYQ Question Bank
- */
+
 
 window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
  
