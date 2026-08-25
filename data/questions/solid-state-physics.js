@@ -1,6 +1,6 @@
 
 
-window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
+window.PHYSICS_QUESTIONS_SOLID_STATE = [
  
   {
     id: "ssp-bc-csir-2011-jun-0001a",
