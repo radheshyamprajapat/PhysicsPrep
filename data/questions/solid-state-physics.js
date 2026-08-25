@@ -4,9 +4,7 @@
  */
 
 window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
-  /* ==========================================================
-   * 1.0 Basic Crystallography
-   * ========================================================== */
+ 
   {
     id: "ssp-bc-csir-2011-jun-0001a",
     exam: "CSIR NET",
@@ -1088,9 +1086,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 0
   },
 
-  /* ==========================================================
-   * 2.0 Bonding In Solid
-   * ========================================================== */
+
+  
   {
     id: "ssp-b-csir-2011-dec-0065",
     exam: "CSIR NET",
@@ -1150,9 +1147,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 1
   },
 
-  /* ==========================================================
-   * 3.0 Lattice Vibrations
-   * ========================================================== */
+
+  
   {
     id: "ssp-lv-csir-2013-jun-0069",
     exam: "CSIR NET",
@@ -1307,9 +1303,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: [1, 2]
   },
 
-  /* ==========================================================
-   * 4.0 Elastic Properties of Solids (Lattice Specific Heat)
-   * ========================================================== */
+
+  
   {
     id: "ssp-ep-csir-2011-dec-0078",
     exam: "CSIR NET",
@@ -1498,9 +1493,7 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 0
   },
 
-  /* ==========================================================
-   * 5.0 Density of States
-   * ========================================================== */
+ 
   {
     id: "ssp-dos-csir-2016-jun-0089",
     exam: "CSIR NET",
@@ -1870,9 +1863,7 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 2
   },
 
-  /* ==========================================================
-   * 7.0 Band Theory of Solids
-   * ========================================================== */
+  
   {
     id: "ssp-bt-csir-2012-dec-0111",
     exam: "CSIR NET",
@@ -2044,9 +2035,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 3
   },
 
-  /* ==========================================================
-   * 8.0 Phonon Interaction
-   * ========================================================== */
+
+  
   {
     id: "ssp-pi-gate-2002-0121",
     exam: "GATE",
@@ -2099,9 +2089,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 2
   },
 
-  /* ==========================================================
-   * 9.0 Semi-Conductor Physics
-   * ========================================================== */
+
+  
   {
     id: "ssp-sc-csir-2013-dec-0124",
     exam: "CSIR NET",
@@ -2251,9 +2240,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 3
   },
 
-  /* ==========================================================
-   * 10.0 Hall Effect
-   * ========================================================== */
+
+  
   {
     id: "ssp-he-csir-2016-dec-0133",
     exam: "CSIR NET",
@@ -2340,9 +2328,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 1
   },
 
-  /* ==========================================================
-   * 11.0 Magnetic Properties of Solids
-   * ========================================================== */
+
+  
   {
     id: "ssp-mag-csir-2011-dec-0138",
     exam: "CSIR NET",
@@ -2446,9 +2433,8 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     answer: 1
   },
 
-  /* ==========================================================
-   * 12.0 Super Conductivity
-   * ========================================================== */
+
+  
   {
     id: "ssp-sc-csir-2011-jun-0144a",
     exam: "CSIR NET",
@@ -2466,7 +2452,7 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     ],
     answer: 0
   },
-  {
+ {
     id: "ssp-sc-csir-2011-jun-0144b",
     exam: "CSIR NET",
     year: 2011,
@@ -2475,3 +2461,551 @@ window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS = [
     type: "MCQ",
     difficulty: "Medium",
     question: "If upper critical field \\(H_{c2} = \\frac{8}{\\pi} \\times 10^5\\,\\text{gauss}\\), the coherence length \\(\\xi\\) is
+error
+The maximum token limit was reached.
+code
+JavaScript
+/**
+ * PhysicsPrep Question Bank - Solid State Physics (Part 2: Superconductivity, Crystal Defects, X-Ray, Experimental Techniques)
+ */
+
+window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS_PART2 = [
+  /* ==========================================================
+   * 12.0 Super Conductivity (Continuation)
+   * ========================================================== */
+  {
+    id: "ssp-sc-csir-2011-jun-0144b",
+    exam: "CSIR NET",
+    year: 2011,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "If upper critical field \\(H_{c2} = \\frac{8}{\\pi} \\times 10^5\\,\\text{gauss}\\) and \\(\\Phi_0 = 2 \\times 10^{-7}\\,\\text{gauss}\\cdot\\text{cm}^2\\), the coherence length \\(\\xi\\) is",
+    options: [
+      "\\(20\\,\\text{\\AA}\\)",
+      "\\(200\\,\\text{\\AA}\\)",
+      "\\(628\\,\\text{\\AA}\\)",
+      "\\(2000\\,\\text{\\AA}\\)"
+    ],
+    answer: 0
+  },
+  {
+    id: "ssp-sc-csir-2015-jun-0145",
+    exam: "CSIR NET",
+    year: 2015,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "The critical magnetic fields of a superconductor at 4 K and 8 K are 11 mA/m and 5.5 mA/m respectively. The transition temperature is approximately",
+    options: [
+      "8.4 K",
+      "10.6 K",
+      "12.9 K",
+      "15.0 K"
+    ],
+    answer: 1
+  },
+  {
+    id: "ssp-sc-csir-2019-dec-0146",
+    exam: "CSIR NET",
+    year: 2019,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "In the AC Josephson effect, for potential difference \\(\\Delta V\\), the angular frequency \\(\\omega\\) of the supercurrent is",
+    options: [
+      "\\(\\frac{2e\\Delta V}{\\hbar}\\)",
+      "\\(\\frac{e\\Delta V}{\\hbar}\\)",
+      "\\(\\frac{e\\Delta V}{\\pi\\hbar}\\)",
+      "\\(\\frac{e\\Delta V}{2\\pi\\hbar}\\)"
+    ],
+    answer: 0
+  },
+  {
+    id: "ssp-sc-csir-2021-jun-0147",
+    exam: "CSIR NET",
+    year: 2021,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "Lead is superconducting below 7 K with \\(B_c(0) = 800 \\times 10^{-4}\\,\\text{T}\\). At 2 K the critical current through a lead wire of radius 5 mm is closest to",
+    options: [
+      "1760 A",
+      "1670 A",
+      "1950 A",
+      "1840 A"
+    ],
+    answer: 3
+  },
+  {
+    id: "ssp-sc-csir-2021-jun-0148",
+    exam: "CSIR NET",
+    year: 2021,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "To measure height \\(h\\) of liquid helium in a container using a NbTi wire of length \\(l\\) (normal resistance \\(R\\), \\(T_c \\approx 10\\,\\text{K}\\)), the measured voltage \\(V(h)\\) under constant current \\(I\\) is",
+    options: [
+      "\\(I R \\left(\\frac{1}{2} - \\frac{2h}{l}\\right)\\)",
+      "\\(I R \\left(1 - \\frac{h}{l}\\right)\\)",
+      "\\(I R \\left(\\frac{1}{2} - \\frac{h}{l}\\right)\\)",
+      "\\(I R \\left(1 - \\frac{2h}{l}\\right)\\)"
+    ],
+    answer: 1
+  },
+  {
+    id: "ssp-sc-csir-2025-mar-0149",
+    exam: "CSIR NET",
+    year: 2025,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "Regarding \\(-M\\) vs \\(H\\) curves below \\(T_c\\): Fig 1 shows linear increase then abrupt drop to 0 at \\(H_c\\); Fig 2 shows linear increase to \\(H_{c1}\\) and smooth drop to \\(H_{c2}\\). The correct statement is",
+    options: [
+      "Fig 1: Type I above \\(T_c\\); Fig 2: Type II below \\(T_c\\)",
+      "Fig 1: Type II below \\(T_c\\) up to \\(H_{c2}\\); Fig 2: Type II up to \\(H_{c1}\\)",
+      "Fig 1: Type I superconductor below \\(T_c\\) and below critical field; Fig 2: Type II superconductor below \\(T_c\\) up to upper critical field",
+      "Fig 1: Type I below \\(T_c\\); Fig 2: Type II below \\(H_{c1}\\)"
+    ],
+    answer: 2
+  },
+  {
+    id: "ssp-sc-gate-2003-0150",
+    exam: "GATE",
+    year: 2003,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "An external field \\(H < H_c\\) is applied to a Type-I superconductor below \\(T_c\\). Which statement is NOT true?",
+    options: [
+      "the sample is diamagnetic",
+      "its magnetization varies linearly with \\(H\\)",
+      "the lines of magnetic induction are pushed out from the sample",
+      "the sample exhibits mixed states of magnetization near \\(H_c\\)"
+    ],
+    answer: 3
+  },
+  {
+    id: "ssp-sc-gate-2004-0151",
+    exam: "GATE",
+    year: 2004,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "The critical magnetic field for a solid in the superconducting state",
+    options: [
+      "does not depend upon temperature",
+      "increases if the temperature increases",
+      "increases if the temperature decreases",
+      "does not depend on the transition temperature"
+    ],
+    answer: 2
+  },
+  {
+    id: "ssp-sc-gate-2004-0152",
+    exam: "GATE",
+    year: 2004,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "Which of the following statements is NOT TRUE for superconductors?",
+    options: [
+      "Entropy decreases markedly on cooling a superconductor below \\(T_c\\)",
+      "Electronic specific heat has an exponential form \\(\\propto e^{-\\Delta/k_B T}\\)",
+      "A type I superconductor is a perfect diamagnet",
+      "Critical temperature of superconductors does not vary with isotopic mass"
+    ],
+    answer: 3
+  },
+  {
+    id: "ssp-sc-gate-2009-0153",
+    exam: "GATE",
+    year: 2009,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "A superconducting ring is cooled in a magnetic field below \\(T_c\\). The total magnetic flux trapped in the ring is quantized in units of",
+    options: [
+      "0",
+      "\\(n\\frac{h}{2e}\\)",
+      "\\(n\\frac{h}{4\\pi e}\\)",
+      "\\(n\\frac{e^2}{hc}\\)"
+    ],
+    answer: 1
+  },
+  {
+    id: "ssp-sc-gate-2013-0154",
+    exam: "GATE",
+    year: 2013,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "Considering the BCS theory of superconductors, which statement is NOT correct?",
+    options: [
+      "presence of energy gap at temperatures below critical temperature",
+      "different critical temperatures for isotopes",
+      "quantization of magnetic flux in superconducting ring in units of \\(h/e\\)",
+      "presence of Meissner effect"
+    ],
+    answer: 2
+  },
+  {
+    id: "ssp-sc-gate-2019-0155",
+    exam: "GATE",
+    year: 2019,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "The relative magnetic permeability \\(\\mu_r\\) of a type-I superconductor in Meissner state is",
+    options: [
+      "0",
+      "-1",
+      "\\(2\\pi\\)",
+      "\\(1/4\\pi\\)"
+    ],
+    answer: 0
+  },
+  {
+    id: "ssp-sc-gate-2019-0156",
+    exam: "GATE",
+    year: 2019,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "NAT",
+    difficulty: "Medium",
+    question: "A type-I superconductor has \\(T_c = 4.7\\,\\text{K}\\) and \\(B_c(0) = 0.3\\,\\text{Tesla}\\). The critical field at 2 K (in Tesla, rounded to 3 decimal places) is",
+    options: [],
+    answer: 0.246
+  },
+  {
+    id: "ssp-sc-gate-2025-0157",
+    exam: "GATE",
+    year: 2025,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MSQ",
+    difficulty: "Medium",
+    question: "Which option(s) is/are correct for a Type I superconductor?",
+    options: [
+      "The phase transition in the absence of a magnetic field is of second order",
+      "With increase in temperature, the critical field decreases linearly to zero",
+      "Below \\(T_c\\), entropy in superconducting state is less than in normal state",
+      "The phase transition in the presence of a magnetic field is of first order"
+    ],
+    answer: [0, 2, 3]
+  },
+  {
+    id: "ssp-sc-tifr-2014-0158",
+    exam: "TIFR",
+    year: 2014,
+    subject: "Solid State Physics",
+    topic: "Super Conductivity",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "A solid sample expels any small applied magnetic field from within the material when cooled below a critical temperature. The sample in this state behaves as a perfect",
+    options: [
+      "Paramagnet",
+      "Diamagnet",
+      "Ferromagnet",
+      "Anti-ferromagnet"
+    ],
+    answer: 1
+  },
+
+  /* ==========================================================
+   * 13.0 Crystal Defects
+   * ========================================================== */
+  {
+    id: "ssp-cd-csir-2012-jun-0159",
+    exam: "CSIR NET",
+    year: 2012,
+    subject: "Solid State Physics",
+    topic: "Crystal Defects",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "The energy to create a vacancy is 1 eV. The ratio of vacancy densities \\(n(1200\\,\\text{K}) / n(300\\,\\text{K})\\) is approximately",
+    options: [
+      "\\(\\exp(-30)\\)",
+      "\\(\\exp(-15)\\)",
+      "\\(\\exp(15)\\)",
+      "\\(\\exp(30)\\)"
+    ],
+    answer: 3
+  },
+  {
+    id: "ssp-cd-csir-2019-dec-0160",
+    exam: "CSIR NET",
+    year: 2019,
+    subject: "Solid State Physics",
+    topic: "Crystal Defects",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "If \\(\\phi\\) is the energy to create a Frenkel defect pair, and \\(n \\ll N, N'\\) where \\(N\\) and \\(N'\\) are lattice and interstitial sites, the number of defects \\(n\\) is",
+    options: [
+      "\\(\\sqrt{N N'}e^{-\\phi / 2k_B T}\\)",
+      "\\(\\sqrt{N N'}e^{-\\phi / k_B T}\\)",
+      "\\(\\frac{1}{2}(N + N')e^{-\\phi / 2k_B T}\\)",
+      "\\(\\frac{1}{2}(N + N')e^{-\\phi / k_B T}\\)"
+    ],
+    answer: 0
+  },
+
+  /* ==========================================================
+   * 14.0 X-Ray
+   * ========================================================== */
+  {
+    id: "ssp-xr-gate-2001-0161",
+    exam: "GATE",
+    year: 2001,
+    subject: "Solid State Physics",
+    topic: "X-Ray",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "X-rays from Cobalt target (\\(Z = 27\\)) contain strong \\(K_\\alpha\\) line at \\(0.1785\\,\\text{nm}\\) and weak \\(K_\\alpha\\) line at \\(0.1930\\,\\text{nm}\\) from an impurity. Using Moseley's law, the atomic number of impurity is",
+    options: [
+      "25",
+      "26",
+      "28",
+      "30"
+    ],
+    answer: 1
+  },
+  {
+    id: "ssp-xr-gate-2024-0162",
+    exam: "GATE",
+    year: 2024,
+    subject: "Solid State Physics",
+    topic: "X-Ray",
+    type: "MSQ",
+    difficulty: "Medium",
+    question: "X-ray spectra for target with accelerating voltages: \\(\\lambda_{\\text{min}, P} = 0.25\\,\\text{\\AA}, \\lambda_{\\text{min}, Q} = 0.5\\,\\text{\\AA}\\), characteristic peaks at \\(1.0\\,\\text{\\AA}\\) and \\(2.25\\,\\text{\\AA}\\). Which statement(s) is/are true?",
+    options: [
+      "Accelerating potential for curve P is greater than that of curve Q",
+      "Accelerating potential applied for curve Q is 24750 V",
+      "Peaks (II) and (IV) correspond to radiative transitions from L to K shells",
+      "Peaks (I) and (III) correspond to radiative transitions from N to K shells"
+    ],
+    answer: [0, 1, 2]
+  },
+
+  /* ==========================================================
+   * 15.0 Experimental Technique based Problem
+   * ========================================================== */
+  {
+    id: "ssp-et-csir-2014-dec-0163",
+    exam: "CSIR NET",
+    year: 2014,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "Solar cell: incident power \\(100\\,\\text{mW/cm}^2\\), \\(J_{sc} = 30\\,\\text{mA/cm}^2, V_{oc} = 0.7\\,\\text{V}\\). If fill factor drops from 0.8 to 0.5, efficiency decreases from",
+    options: [
+      "42.0 to 26.2",
+      "24.0 to 16.8",
+      "21.0 to 10.5",
+      "16.8 to 10.5"
+    ],
+    answer: 3
+  },
+  {
+    id: "ssp-et-csir-2016-dec-0164",
+    exam: "CSIR NET",
+    year: 2016,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "A silica particle (radius \\(0.1\\,\\mu\\text{m}\\), density \\(2000\\,\\text{kg/m}^3\\)) in water (density \\(1000\\,\\text{kg/m}^3\\)) at 300 K has an average height above base due to thermal fluctuations of approximately",
+    options: [
+      "\\(10^{-3}\\,\\text{m}\\)",
+      "\\(3 \\times 10^{-4}\\,\\text{m}\\)",
+      "\\(10^{-4}\\,\\text{m}\\)",
+      "\\(5 \\times 10^{-5}\\,\\text{m}\\)"
+    ],
+    answer: 2
+  },
+  {
+    id: "ssp-et-csir-2016-dec-0165",
+    exam: "CSIR NET",
+    year: 2016,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "Blue LED active medium is \\(\\text{Ga}_x\\text{In}_{1-x}\\text{N}\\). Band gaps are \\(E_g(\\text{GaN}) = 3.5\\,\\text{eV}, E_g(\\text{InN}) = 1.5\\,\\text{eV}\\). To emit light at \\(400\\,\\text{nm}\\) (\\(hc \\approx 1200\\,\\text{eV}\\cdot\\text{nm}\\)), \\(x\\) is",
+    options: [
+      "0.95",
+      "0.75",
+      "0.50",
+      "0.33"
+    ],
+    answer: 1
+  },
+  {
+    id: "ssp-et-csir-2021-jun-0166",
+    exam: "CSIR NET",
+    year: 2021,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "In Thomson's \\(e/m\\) experiment, deflecting electric field is \\(6 \\times 10^6\\,\\text{N/C}\\) and accelerating potential is 150 V. The magnetic field for zero deflection is closest to",
+    options: [
+      "0.6 T",
+      "1.2 T",
+      "0.4 T",
+      "0.8 T"
+    ],
+    answer: 3
+  },
+  {
+    id: "ssp-et-csir-2023-jun-0167",
+    exam: "CSIR NET",
+    year: 2023,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "In lock-in detection of Hall effect with modulated field \\(B = B_0\\sin\\Omega t\\), the detected Hall voltage \\(V_H\\) (RMS of fundamental component) is",
+    options: [
+      "\\(B_0 \\frac{R_H I}{d}\\)",
+      "\\(\\frac{B_0}{\\sqrt{2}}\\frac{R_H I}{d}\\)",
+      "\\(\\frac{I}{\\sqrt{2}}\\left(\\frac{B_0 R_H I}{d} + R\\right)\\)",
+      "\\(I\\left(\\frac{B_0 R_H}{d} + R\\right)\\)"
+    ],
+    answer: 1
+  },
+  {
+    id: "ssp-et-csir-2023-dec-0168",
+    exam: "CSIR NET",
+    year: 2023,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "Solar cell with uniform photon flux between 1 eV and 2 eV has bandgap 1.5 eV and absorbs 80% of photons above bandgap. The power conversion efficiency is closest to",
+    options: [
+      "47%",
+      "70%",
+      "23%",
+      "35%"
+    ],
+    answer: 0
+  },
+  {
+    id: "ssp-et-csir-2023-dec-0169",
+    exam: "CSIR NET",
+    year: 2023,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "Solar probe detects fractional shift \\(\\Delta\\lambda/\\lambda = 10^{-5}\\) for \\(\\lambda = 630\\,\\text{nm}\\) line in sunspot due to normal Zeeman effect. The estimated magnetic field in Tesla is closest to",
+    options: [
+      "\\(3 \\times 10^{-5}\\)",
+      "300",
+      "0.3",
+      "\\(3 \\times 10^5\\)"
+    ],
+    answer: 2
+  },
+  {
+    id: "ssp-et-gate-2004-0170",
+    exam: "GATE",
+    year: 2004,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Easy",
+    question: "Which one of the following statements is TRUE?",
+    options: [
+      "Magnetic tapes are made of Iron",
+      "Permanent magnets are made from ferrites",
+      "Ultrasonic transducers are made from quartz crystals",
+      "Optoelectronic devices are made from soft ferrites"
+    ],
+    answer: 1
+  },
+  {
+    id: "ssp-et-tifr-2012-0171",
+    exam: "TIFR",
+    year: 2012,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "If an electron is modeled as a uniform sphere spinning with \\(L = \\hbar/2\\) such that equatorial speed does not exceed \\(c\\), the minimum radius \\(r_e\\) is",
+    options: [
+      "19.2 fm",
+      "0.192 fm",
+      "4.8 fm",
+      "1960 fm",
+      "480 fm"
+    ],
+    answer: 4
+  },
+  {
+    id: "ssp-et-tifr-2021-0172",
+    exam: "TIFR",
+    year: 2021,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "A detector has true emission rate 20,000 counts/s and recorded rate 19,000 counts/s. The dead time of the counter is",
+    options: [
+      "2.63 microseconds",
+      "2.63 nanoseconds",
+      "50.0 milliseconds",
+      "2.63 seconds"
+    ],
+    answer: 0
+  },
+  {
+    id: "ssp-et-tifr-2022-0173",
+    exam: "TIFR",
+    year: 2022,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Medium",
+    question: "A solar converter (plate area \\(1.6\\,\\text{m}^2\\), absorbing 20% of \\(1.36\\,\\text{kW/m}^2\\)) operating between \\(127^\\circ\\text{C}\\) (400 K) and \\(27^\\circ\\text{C}\\) (300 K) claims to deliver 100 W power. The advice should be",
+    options: [
+      "it is an efficient device for the given specifications.",
+      "the power delivered is very small for the given specifications.",
+      "the advertisement is false and the device cannot deliver so much power.",
+      "other similar devices are available which can deliver 1.5 - 2.0 times the power."
+    ],
+    answer: 0
+  },
+  {
+    id: "ssp-et-tifr-2024-0174",
+    exam: "TIFR",
+    year: 2024,
+    subject: "Solid State Physics",
+    topic: "Experimental Technique based Problem",
+    type: "MCQ",
+    difficulty: "Hard",
+    question: "Background count rate is 50 counts/min. Source + background gives 168 counts in 1 min. After 24 hrs, it gives 91 counts in 1 min. The % error in calculated half-life due to counting statistics is",
+    options: [
+      "18.2%",
+      "21.2%",
+      "25.7%",
+      "24.3%"
+    ],
+    answer: 3
+  }
+];
