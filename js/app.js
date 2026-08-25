@@ -559,6 +559,14 @@
       allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
+         subjectDistribution: {
+  "Quantum Mechanics": 17,
+  "Nuclear Physics": 17,
+  "Thermal Physics": 17,
+  "Classical Mechanics": 17,
+  "Solid State Physics": 16,
+  "Atomic & Molecular Physics": 16
+},
 
       icon: "⚛️",
 
@@ -586,6 +594,14 @@
       allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
+         subjectDistribution: {
+  "Quantum Mechanics": 17,
+  "Nuclear Physics": 17,
+  "Thermal Physics": 17,
+  "Classical Mechanics": 17,
+  "Solid State Physics": 16,
+  "Atomic & Molecular Physics": 16
+},
 
       icon: "⚛️",
 
