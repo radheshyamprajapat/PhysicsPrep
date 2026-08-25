@@ -44,8 +44,8 @@ window.QuestionEngine = (() => {
       : []),
 
   //sold
-     ...(Array.isArray(window.PHYSICS_QUESTIONS_SOLID_STATE)
-    ? window.PHYSICS_QUESTIONS_SOLID_STATE
+     ...(Array.isArray(window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS)
+    ? window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS
       : [])
     
   ];
