@@ -43,9 +43,9 @@ window.QuestionEngine = (() => {
     ? window.PHYSICS_QUESTIONS_CLASSICAL_MECHANICS 
       : []),
 
-  //sold
-     ...(Array.isArray(window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS)
-    ? window.PHYSICS_QUESTIONS_SOLID_STATE_PHYSICS
+  //solid
+     ...(Array.isArray(window.PHYSICS_QUESTIONS_SOLID_STATE)
+    ? window.PHYSICS_QUESTIONS_SOLID_STATE
       : [])
     
   ];
