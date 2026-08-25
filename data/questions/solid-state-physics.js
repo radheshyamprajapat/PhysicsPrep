@@ -1803,6 +1803,5 @@ window.PHYSICS_QUESTIONS_SOLID_STATE = [
     ],
     "answer": 0
   }
-]
-
+];
 
