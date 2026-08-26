@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSIR NET Mock — PhysicsPrep</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/csir-test.css">
+<script>
+window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},svg:{fontCache:'global'}};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body data-page="test">
+<header class="cbt-header">
+  <div class="cbt-brand">
+    <a class="brand" href="index.html"><span class="brand-icon">⚛</span><span>PhysicsPrep</span></a>
+    <span class="cbt-title">CSIR NET Physical Sciences</span>
+  </div>
+  <div class="cbt-header-right">
+    <button id="paletteMobileBtn" class="mobile-palette-btn" type="button">☷ Questions</button>
+    <div class="cbt-timer"><span>Time Left</span><strong id="timer">150:00</strong></div>
+  </div>
+</header>
+
+<div class="csir-section-bar">
+  <button class="csir-part-tab active" data-part="B" type="button">Part B <span>25 Questions</span></button>
+  <button class="csir-part-tab" data-part="C" type="button">Part C <span>30 Questions</span></button>
+  <div class="csir-score-info">B: +3.5 / −0.875 &nbsp; | &nbsp; C: +5 / −1.25</div>
+</div>
+
+<div class="csir-layout">
+  <main class="cbt-main">
+    <div class="test-info">
+      <div><span class="test-label" id="testSubject">Physics</span><span class="test-topic" id="testTopic"></span></div>
+      <div class="progress-text" id="progress">Part B • Question 1 / 25</div>
+    </div>
+    <section class="cbt-question-card">
+      <div class="question-topline"><h1 id="questionNumber">Part B — Question 1</h1><span id="questionMeta" class="question-meta"></span></div>
+      <div id="questionText" class="question-text">Loading question…</div>
+      <div id="options" class="cbt-options"></div>
+    </section>
+    <div class="cbt-actions">
+      <div class="left-actions">
+        <button id="clearBtn" class="cbt-btn outline" type="button">Clear Response</button>
+        <button id="markBtn" class="cbt-btn review" type="button">Mark for Review &amp; Next</button>
+      </div>
+      <div class="right-actions">
+        <button id="prevBtn" class="cbt-btn secondary" type="button">← Previous</button>
+        <button id="nextBtn" class="cbt-btn primary" type="button">Save &amp; Next →</button>
+        <button id="finishBtn" class="cbt-btn submit hidden" type="button">Submit Test</button>
+      </div>
+    </div>
+    <div class="keyboard-hint"><kbd>1</kbd>–<kbd>4</kbd> answer &nbsp; <kbd>←</kbd><kbd>→</kbd> navigate</div>
+  </main>
+
+  <aside class="cbt-sidebar" id="questionPalette">
+    <div class="palette-head">
+      <div><h2>Question Palette</h2><p id="paletteCount">55 Questions</p></div>
+      <button id="closePalette" class="close-palette" type="button">×</button>
+    </div>
+    <div class="palette-status">
+      <span><i class="dot answered"></i> Answered</span>
+      <span><i class="dot notanswered"></i> Not Answered</span>
+      <span><i class="dot marked"></i> Marked</span>
+      <span><i class="dot visited"></i> Not Visited</span>
+    </div>
+    <div id="paletteGrid" class="palette-grid"></div>
+    <div class="palette-bottom">
+      <p id="attemptInfo">Part B: 0 / 20 attempted<br>Part C: 0 / 20 attempted</p>
+      <button id="submitSideBtn" class="cbt-btn submit full" type="button">Submit Test</button>
+    </div>
+  </aside>
+</div>
+<div class="palette-overlay" id="paletteOverlay"></div>
+
+<script src="data/questions/quantum/1d-potential.js"></script>
+<script src="data/questions/quantum/angular-momentum.js"></script>
+<script src="data/questions/quantum/harmonic.js"></script>
+<script src="data/questions/quantum/perturbation.js"></script>
+<script src="data/questions/nuclear.js"></script>
+<script src="data/questions/atomic-molecular.js"></script>
+<script src="data/questions/thermal.js"></script>
+<script src="data/questions/classical-mechanics.js"></script>
+<script src="data/questions/solid-state-physics.js"></script>
+<script src="data/questions/mmp.js"></script>
+<script src="js/question-engine.js"></script>
+<script src="js/csir-test-engine.js"></script>
+</body>
+</html>

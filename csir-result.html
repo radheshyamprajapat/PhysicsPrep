@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSIR NET Result — PhysicsPrep</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/csir-result.css">
+<script>
+window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},svg:{fontCache:'global'}};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-icon">⚛</span><span>PhysicsPrep</span></a><nav class="main-nav"><a href="index.html">Home</a><a href="practice.html">Practice</a><a class="active" href="mock.html">Mock Test</a><a href="pyq.html">PYQs</a></nav></div></header>
+<main class="page-main"><div class="container result-container">
+<section class="result-hero"><div class="hero-icon" id="heroIcon">★</div><div><span class="eyebrow">CSIR NET PHYSICAL SCIENCES</span><h1 id="resultTitle">Test Result</h1><p id="resultSubtitle">Review your Part B and Part C performance.</p></div><div class="score-hero"><strong id="score">0 / 170</strong><span id="percentage">0%</span></div></section>
+<section class="csir-summary-grid">
+<article class="csir-part-result"><div class="part-result-head"><div><span class="part-kicker">PART B</span><h2>Part B</h2></div><strong id="partBScore">0 / 70</strong></div><div class="stat-row"><span>Correct <b id="bCorrect">0</b></span><span>Wrong <b id="bWrong">0</b></span><span>Skipped <b id="bSkipped">0</b></span><span>Attempted <b id="bAttempted">0 / 20</b></span></div><p class="marking-line">+3.5 for correct • −0.875 for wrong</p></article>
+<article class="csir-part-result"><div class="part-result-head"><div><span class="part-kicker">PART C</span><h2>Part C</h2></div><strong id="partCScore">0 / 100</strong></div><div class="stat-row"><span>Correct <b id="cCorrect">0</b></span><span>Wrong <b id="cWrong">0</b></span><span>Skipped <b id="cSkipped">0</b></span><span>Attempted <b id="cAttempted">0 / 20</b></span></div><p class="marking-line">+5 for correct • −1.25 for wrong</p></article>
+</section>
+<section class="result-overview"><div><span>Total Questions</span><strong id="totalQuestions">55</strong></div><div><span>Correct</span><strong id="correct">0</strong></div><div><span>Wrong</span><strong id="wrong">0</strong></div><div><span>Skipped</span><strong id="skipped">0</strong></div><div><span>Negative Marks</span><strong id="negativeMarks">0</strong></div></section>
+<section class="review-section"><div class="review-heading"><div><span class="eyebrow">QUESTION REVIEW</span><h2>Check Your Responses</h2></div><button id="wrongPracticeBtn" class="cbt-btn primary" type="button">Practice Wrong Questions</button></div>
+<div class="filter-tabs"><button class="filter-tab active" data-filter="all" type="button">All</button><button class="filter-tab" data-filter="correct" type="button">Correct</button><button class="filter-tab" data-filter="wrong" type="button">Wrong</button><button class="filter-tab" data-filter="skipped" type="button">Not Attempted</button></div>
+<p id="reviewCount" class="review-count">55 Questions</p><div id="reviewList"></div><div id="emptyReview" class="empty-review hidden">No questions match this filter.</div></section>
+</div></main>
+<script src="js/csir-result.js"></script>
+</body>
+</html>
