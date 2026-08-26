@@ -46,6 +46,11 @@ window.QuestionEngine = (() => {
   //solid
      ...(Array.isArray(window.PHYSICS_QUESTIONS_SOLID_STATE)
     ? window.PHYSICS_QUESTIONS_SOLID_STATE
+      : []),
+
+     //solid
+     ...(Array.isArray(window.PHYSICS_QUESTIONS_MMP)
+    ? window.window.PHYSICS_QUESTIONS_MMP 
       : [])
     
   ];
