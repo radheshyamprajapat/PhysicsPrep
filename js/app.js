@@ -493,7 +493,7 @@
      MOCK TEST PAGE
   ========================================================= */
 
- function initMock() {
+function initMock() {
 
   const grid = document.querySelector("#mockGrid");
 
@@ -502,13 +502,17 @@
 
   const configs = [
 
+    /* =========================================================
+       BARC MOCK 01
+    ========================================================= */
+
     {
       id: "barc-full-01",
 
       title: "BARC Physics — Full Length Mock 01",
 
       desc:
-        "100 mixed Physics MCQs • 2 hours ",
+        "100 mixed Physics MCQs • 2 hours",
 
       count: 100,
 
@@ -523,28 +527,35 @@
       allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
-      
+
       subjectDistribution: {
-  "Quantum Mechanics": 17,
-  "Nuclear Physics": 17,
-  "Thermal Physics": 17,
-  "Classical Mechanics": 17,
-  "Solid State Physics": 16,
-  "Atomic & Molecular Physics": 16
-},
+        "Quantum Mechanics": 17,
+        "Nuclear Physics": 17,
+        "Thermal Physics": 17,
+        "Classical Mechanics": 17,
+        "Solid State Physics": 16,
+        "Atomic & Molecular Physics": 16
+      },
 
       icon: "⚛️",
 
-      featured: true
+      featured: true,
+
+      startPage: "test.html"
     },
 
-     {
+
+    /* =========================================================
+       BARC MOCK 02
+    ========================================================= */
+
+    {
       id: "barc-full-02",
 
       title: "BARC Physics — Full Length Mock 02",
 
       desc:
-        "100 mixed Physics MCQs • 2 hours ",
+        "100 mixed Physics MCQs • 2 hours",
 
       count: 100,
 
@@ -559,27 +570,35 @@
       allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
-         subjectDistribution: {
-  "Quantum Mechanics": 17,
-  "Nuclear Physics": 17,
-  "Thermal Physics": 17,
-  "Classical Mechanics": 17,
-  "Solid State Physics": 16,
-  "Atomic & Molecular Physics": 16
-},
+
+      subjectDistribution: {
+        "Quantum Mechanics": 17,
+        "Nuclear Physics": 17,
+        "Thermal Physics": 17,
+        "Classical Mechanics": 17,
+        "Solid State Physics": 16,
+        "Atomic & Molecular Physics": 16
+      },
 
       icon: "⚛️",
 
-      featured: true
+      featured: true,
+
+      startPage: "test.html"
     },
 
-     {
+
+    /* =========================================================
+       BARC MOCK 03
+    ========================================================= */
+
+    {
       id: "barc-full-03",
 
       title: "BARC Physics — Full Length Mock 03",
 
       desc:
-        "100 mixed Physics MCQs • 2 hours ",
+        "100 mixed Physics MCQs • 2 hours",
 
       count: 100,
 
@@ -594,20 +613,63 @@
       allowedTypes: [],
 
       allowedDifficulty: ["Easy", "Moderate"],
-         subjectDistribution: {
-  "Quantum Mechanics": 17,
-  "Nuclear Physics": 17,
-  "Thermal Physics": 17,
-  "Classical Mechanics": 17,
-  "Solid State Physics": 16,
-  "Atomic & Molecular Physics": 16
-},
+
+      subjectDistribution: {
+        "Quantum Mechanics": 17,
+        "Nuclear Physics": 17,
+        "Thermal Physics": 17,
+        "Classical Mechanics": 17,
+        "Solid State Physics": 16,
+        "Atomic & Molecular Physics": 16
+      },
 
       icon: "⚛️",
 
-      featured: true
+      featured: true,
+
+      startPage: "test.html"
     },
 
+
+    /* =========================================================
+       CSIR NET — B + C MOCK
+    ========================================================= */
+
+    {
+      id: "csir-net-bc-01",
+
+      title: "CSIR-NET Physical Sciences — Mock 01",
+
+      desc:
+        "Part B + Part C • 170 marks • 2 hours 30 minutes",
+
+      count: 55,
+
+      duration: 150 * 60,
+
+      exam: "",
+
+      subject: "",
+
+      topic: "",
+
+      allowedTypes: [],
+
+      allowedDifficulty: [],
+
+      icon: "🎓",
+
+      featured: true,
+
+      startPage: "csir-test.html",
+
+      customTest: true
+    },
+
+
+    /* =========================================================
+       QUANTUM MECHANICS
+    ========================================================= */
 
     {
       id: "quantum-mock",
@@ -627,9 +689,15 @@
 
       topic: "",
 
-      icon: "⚛️"
+      icon: "⚛️",
+
+      startPage: "test.html"
     },
 
+
+    /* =========================================================
+       MIXED PHYSICS
+    ========================================================= */
 
     {
       id: "mixed-mock",
@@ -649,11 +717,17 @@
 
       topic: "",
 
-      icon: "🌐"
+      icon: "🌐",
+
+      startPage: "test.html"
     }
 
   ];
 
+
+  /* =========================================================
+     CREATE MOCK CARDS
+  ========================================================= */
 
   grid.innerHTML = configs.map((c, i) => {
 
@@ -663,25 +737,21 @@
 
         ${c.featured ? `
           <div class="featured-badge">
-            FULL LENGTH
+            ${c.customTest ? "CSIR-NET" : "FULL LENGTH"}
           </div>
         ` : ""}
-
 
         <div class="card-icon">
           ${c.icon}
         </div>
 
-
         <h3>
           ${escapeHTML(c.title)}
         </h3>
 
-
         <p>
           ${escapeHTML(c.desc)}
         </p>
-
 
         <div class="meta">
 
@@ -693,18 +763,11 @@
             ${c.duration / 60} Minutes
           </span>
 
-          ${c.featured ? `
-            <span class="pill">
-              Mixed Physics
-            </span>
-          ` : `
-            <span class="pill">
-              Random
-            </span>
-          `}
+          <span class="pill">
+            ${c.customTest ? "Part B + C" : c.featured ? "Mixed Physics" : "Random"}
+          </span>
 
         </div>
-
 
         <button
           class="btn btn-primary"
@@ -721,9 +784,9 @@
   }).join("");
 
 
-  /*
-   * START MOCK
-   */
+  /* =========================================================
+     START MOCK
+  ========================================================= */
 
   grid.querySelectorAll("[data-mock]").forEach(btn => {
 
@@ -733,9 +796,25 @@
         configs[Number(btn.dataset.mock)];
 
 
-      /*
-       * Start with all available questions
-       */
+      /* =====================================================
+         CSIR-NET SPECIAL TEST
+         
+         CSIR has its own test engine.
+         Do NOT use the normal BARC test engine.
+      ===================================================== */
+
+      if (config.customTest) {
+
+        location.href = config.startPage;
+
+        return;
+
+      }
+
+
+      /* =====================================================
+         NORMAL MOCK TEST
+      ===================================================== */
 
       let questions =
         QuestionEngine.filter({
@@ -749,11 +828,9 @@
         });
 
 
-      /*
-       * Filter question type
-       *
-       * BARC mock currently uses PYQs
-       */
+      /* -----------------------------------------------------
+         QUESTION TYPE FILTER
+      ----------------------------------------------------- */
 
       if (
         config.allowedTypes &&
@@ -768,12 +845,9 @@
       }
 
 
-      /*
-       * Filter difficulty
-       *
-       * Only if difficulty exists
-       * in the question data.
-       */
+      /* -----------------------------------------------------
+         DIFFICULTY FILTER
+      ----------------------------------------------------- */
 
       if (
         config.allowedDifficulty &&
@@ -785,14 +859,6 @@
             q.difficulty
           );
 
-
-        /*
-         * If difficulty information exists,
-         * apply the filter.
-         *
-         * If old questions don't have difficulty,
-         * don't accidentally remove everything.
-         */
 
         if (questionsWithDifficulty.length > 0) {
 
@@ -807,20 +873,63 @@
       }
 
 
-      /*
-       * Random selection
-       */
+      /* -----------------------------------------------------
+         SUBJECT BALANCED SELECTION
+      ----------------------------------------------------- */
 
-      const selected =
-        QuestionEngine.sample(
-          questions,
-          config.count
-        );
+      let selected = [];
 
 
-      /*
-       * No questions
-       */
+      if (
+        config.subjectDistribution &&
+        Object.keys(config.subjectDistribution).length
+      ) {
+
+        Object.entries(config.subjectDistribution)
+          .forEach(([subjectName, requiredCount]) => {
+
+            const subjectQuestions =
+              questions.filter(q =>
+                q.subject === subjectName
+              );
+
+
+            const picked =
+              QuestionEngine.sample(
+                subjectQuestions,
+                requiredCount
+              );
+
+
+            selected.push(...picked);
+
+          });
+
+
+        /* Shuffle final balanced paper */
+
+        selected =
+          QuestionEngine.sample(
+            selected,
+            selected.length
+          );
+
+      }
+
+      else {
+
+        selected =
+          QuestionEngine.sample(
+            questions,
+            config.count
+          );
+
+      }
+
+
+      /* -----------------------------------------------------
+         NO QUESTIONS
+      ----------------------------------------------------- */
 
       if (!selected.length) {
 
@@ -834,9 +943,9 @@
       }
 
 
-      /*
-       * Save test session
-       */
+      /* -----------------------------------------------------
+         SAVE NORMAL TEST SESSION
+      ----------------------------------------------------- */
 
       sessionStorage.setItem(
 
@@ -857,18 +966,18 @@
       );
 
 
-      /*
-       * Open CBT interface
-       */
+      /* -----------------------------------------------------
+         OPEN NORMAL CBT
+      ----------------------------------------------------- */
 
-      location.href = "test.html";
+      location.href =
+        config.startPage || "test.html";
 
     });
 
   });
 
 }
-
 
   /* =========================================================
      ESCAPE HTML
