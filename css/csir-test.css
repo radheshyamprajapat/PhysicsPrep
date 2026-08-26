@@ -1,0 +1,13 @@
+/* CSIR-NET-specific CBT additions. Existing CBT styles remain unchanged. */
+.csir-section-bar{display:flex;align-items:center;gap:10px;padding:10px 18px;background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:20}
+.csir-part-tab{border:1px solid #d8dee8;background:#f8fafc;color:#334155;border-radius:10px;padding:9px 14px;font:700 13px/1 Inter,sans-serif;cursor:pointer}
+.csir-part-tab span{display:block;margin-top:3px;font-size:11px;font-weight:600;color:#64748b}
+.csir-part-tab.active{background:#eef4ff;border-color:#2563eb;color:#1d4ed8}
+.csir-score-info{margin-left:auto;color:#475569;font:700 12px/1.4 Inter,sans-serif}
+.csir-layout{min-height:calc(100vh - 130px)}
+.nat-answer-box{margin-top:18px;padding:20px;border:1px solid #dbe2ea;border-radius:14px;background:#f8fafc}
+.nat-answer-box label{display:block;margin-bottom:8px;font:800 14px/1.4 Inter,sans-serif}
+.nat-input{width:min(100%,320px);box-sizing:border-box;padding:13px 14px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;font:600 16px/1.2 Inter,sans-serif;outline:none}
+.nat-input:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.nat-help{margin-top:8px;color:#64748b;font:500 12px/1.4 Inter,sans-serif}
+@media(max-width:760px){.csir-section-bar{flex-wrap:wrap;padding:8px 12px}.csir-score-info{width:100%;margin-left:0}.csir-part-tab{flex:1}}
