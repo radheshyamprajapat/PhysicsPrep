@@ -1,4 +1,4 @@
-[
+window.PHYSICS_QUESTIONS_MMP = [
   {
     "id": "mp-ca-csir-2011-jun-0001",
     "exam": "CSIR NET",
@@ -4570,5 +4570,5 @@
     "options": [],
     "answer": 60
   }
-]
+];
 
