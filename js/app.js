@@ -668,6 +668,47 @@ function initMock() {
 
 
     /* =========================================================
+       CSIR NET — B + C MOCK
+    ========================================================= */
+
+    {
+      id: "csir-net-bc-02",
+
+      title: "CSIR-NET Physical Sciences — Mock 02",
+
+      desc:
+        "Part A + B + C • 200 marks • 3 hours ",
+
+      count: 55,
+
+      duration: 150 * 60,
+
+      exam: "",
+
+      subject: "",
+
+      topic: "",
+
+      allowedTypes: [],
+
+      allowedDifficulty: [],
+
+      icon: "🎓",
+
+      featured: true,
+
+      startPage: "csir-test.html",
+
+      customTest: true
+    },
+
+
+
+
+
+    
+
+    /* =========================================================
        QUANTUM MECHANICS
     ========================================================= */
 
@@ -694,6 +735,30 @@ function initMock() {
       startPage: "test.html"
     },
 
+   
+    {
+      id: "quantum-mock",
+
+      title: "Mathematical Physics",
+
+      desc:
+        "Mathematical Physics",
+
+      count: 25,
+
+      duration: 30 * 60,
+
+      exam: "",
+
+      subject: "Mathematical Physics",
+
+      topic: "",
+
+      icon: "⚛️",
+
+      startPage: "test.html"
+    },
+ 
 
     /* =========================================================
        MIXED PHYSICS
