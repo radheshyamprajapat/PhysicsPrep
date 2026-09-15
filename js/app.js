@@ -630,6 +630,54 @@ function initMock() {
       startPage: "test.html"
     },
 
+  /* =========================================================
+       BARC MOCK 03
+    ========================================================= */
+
+    {
+      id: "barc-full-04",
+
+      title: "BARC Physics — Full Length Mock 04",
+
+      desc:
+        "100 mixed Physics MCQs • 2 hours",
+
+      count: 100,
+
+      duration: 120 * 60,
+
+      exam: "",
+
+      subject: "",
+
+      topic: "",
+
+      allowedTypes: [],
+
+      allowedDifficulty: ["Easy", "Moderate"],
+
+      subjectDistribution: {
+        "Quantum Mechanics": 17,
+        "Nuclear Physics": 17,
+        "Thermal Physics": 17,
+        "Classical Mechanics": 17,
+        "Solid State Physics": 16,
+        "Atomic & Molecular Physics": 16
+      },
+
+      icon: "⚛️",
+
+      featured: true,
+
+      startPage: "test.html"
+    },
+
+
+
+
+
+
+    
 
     /* =========================================================
        CSIR NET — B + C MOCK
